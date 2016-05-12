@@ -67,7 +67,7 @@
 			</div>
 			
 			<div class="control-group">
-				<!-- Text input-->
+			
 				<label class="control-label" for="input01">软件版本</label>
 				<div class="controls">
 					<input type="text" placeholder="请输入或选择软件版本代号" class="input-large">
