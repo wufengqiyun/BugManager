@@ -20,17 +20,17 @@
 	type="text/javascript"></script>
 </head>
 <body>
-	<form class="form-horizontal">
+	<form class="form-horizontal" action="bug/BugInput" method="post" name="bugInput">
 		<fieldset>
 		
 			<div id="legend" class="">
-				<legend class="">表单名</legend>
+				<legend class="">提交缺陷</legend>
 			</div>
 			
 			<div class="control-group">
-				<label class="control-label" for="input01">发现者&nbsp</label>
+				<label class="control-label" for="bug_Finder">发现者&nbsp</label>
 				<div class="controls">
-					<input type="text" placeholder="请输入发现者名称或代号" class="input-large">
+					<input type="text" placeholder="请输入发现者名称或代号" class="input-large" id="bug_Finder" name="bug_Finder">
 					<p class="help-block"></p>
 				</div>
 			</div>
@@ -40,7 +40,7 @@
 				<div class="controls"> 
 					<div class="input-append date form_date" data-date=""
 						data-date-format="yyyy-MM-dd">
-					<input size="8" type="text" value="" readonly class="input-medium">
+					<input size="8" type="text" value="" readonly class="input-medium" id="bug_Time" name="bug_Time">
 					<span class="add-on"><i class="icon-remove"></i></span>
 					<span class="add-on"><i class="icon-th"></i></span> 
 					<p class="help-block"></p>
@@ -52,7 +52,7 @@
 				<!-- Text input-->
 				<label class="control-label" for="input01">缺陷名称</label>
 				<div class="controls">
-					<input type="text" placeholder="请输入缺陷名称" class="input-large">
+					<input type="text" placeholder="请输入缺陷名称" class="input-large" id="bug_Name" name="bug_Name">
 					<p class="help-block"></p>
 				</div>
 			</div>
@@ -61,7 +61,7 @@
 				<!-- Text input-->
 				<label class="control-label" for="input01">来源软件</label>
 				<div class="controls">
-					<input type="text" placeholder="请输入缺陷所在的软件" class="input-large">
+					<input type="text" placeholder="请输入缺陷所在的软件" class="input-large" id="bug_From" name="bug_From">
 					<p class="help-block"></p>
 				</div>
 			</div>
@@ -70,7 +70,7 @@
 			
 				<label class="control-label" for="input01">软件版本</label>
 				<div class="controls">
-					<input type="text" placeholder="请输入或选择软件版本代号" class="input-large">
+					<input type="text" placeholder="请输入或选择软件版本代号" class="input-large" id="bug_Fromv" name="bug_Fromv">
 					<p class="help-block"></p>
 				</div>
 			</div>
@@ -79,7 +79,7 @@
 				<!-- Select Basic -->
 				<label class="control-label">缺陷层级</label>
 				<div class="controls">
-					<select class="input-large">
+					<select class="input-large" id="bug_Level" name="bug_Level">
 						<option>危急（Critical）</option>
 						<option>严重（Serious）</option>
 						<option>重要（Important）</option>
@@ -94,7 +94,7 @@
 				<!-- Select Basic -->
 				<label class="control-label">缺陷种类</label>
 				<div class="controls">
-					<select class="input-large">
+					<select class="input-large" id="bug_Type" name="bug_Type">
 						<option>功能问题F- Function</option>
 						<option>接口问题I-Interface</option>
 						<option>计算问题C-Computation</option>
@@ -111,7 +111,8 @@
 				<label class="control-label">其他描述</label>
 				<div class="controls">
 					<div class="textarea">
-						<textarea type="" class="input-xlarge" rows="5"> </textarea>
+						<textarea type="" class="input-xlarge" rows="5" id="bug_Desc" name="bug_Desc"> 
+						</textarea>
 					</div>
 				</div>
 			</div>

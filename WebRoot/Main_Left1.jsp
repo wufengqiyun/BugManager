@@ -22,14 +22,15 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         <span>您好：管理员</span><span>注销</span>
     </div>
 </div> -->
+
 <div class="nav-down">
 	<div class="leftmenu1">
         <!-- <div class="menu-oc"><img src="images/menu-all.png" /></div> -->
     	<ul>
         	<li>
-            	<a class="a_list a_list1">项目管理</a>
+            	<a class="a_list a_list1">软件管理</a>
                 <div class="menu_list menu_list_first">
-                	<a class="lista_first" href="#">录入</a>
+                	<a class="lista_first" href="SoftwareInput.jsp" target="rightFrame">录入</a>
                     <a href="#">展示</a>
                     <a href="#">修改</a>
                     <a href="#">删除</a>
@@ -61,6 +62,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 </div>
             </li>
         </ul>
+    </div>
     </div>
    <!--  <div class="leftmenu2">
     	<div class="menu-oc1"><img src="images/menu-all.png" /></div>

@@ -9,10 +9,19 @@
     <servlet-name>loginServlet</servlet-name>
     <servlet-class>com.bm.servlet.loginServlet</servlet-class>
   </servlet>
+  <servlet>
+    <servlet-name>BugInputServlet</servlet-name>
+    <servlet-class>com.bm.servlet.BugInputServlet</servlet-class>
+  </servlet>
+
 
   <servlet-mapping>
     <servlet-name>loginServlet</servlet-name>
     <url-pattern>/user/loginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BugInputServlet</servlet-name>
+    <url-pattern>/bug/BugInput</url-pattern>
   </servlet-mapping>	
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>

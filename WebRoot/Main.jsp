@@ -23,13 +23,15 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
 
-    <frameset rows="88,*,31" cols="*" frameborder="no" border="0" framespacing="0">
+    <frameset rows="88,*,0" cols="*" frameborder="no" border="0" framespacing="0">
   		<frame src="Main_Top.jsp" name="topFrame" scrolling="No" noresize="noresize" id="topFrame" title="topFrame" />
-  	<frameset cols="187,*" frameborder="no" border="0" framespacing="0">
+  	<frameset cols="200,*" frameborder="no" border="0" framespacing="0">
     	<frame src="Main_Left1.jsp" name="leftFrame" scrolling="No" noresize="noresize" id="leftFrame" title="leftFrame" />
     	<frame src="Main_Right.jsp" name="rightFrame" id="rightFrame" title="rightFrame" />
     </frameset>
 	</frameset>
   <body>
+  <div >版权所有  2014&nbsp;&nbsp;&nbsp; <strong>uimaker.com</strong> &nbsp;&nbsp;&nbsp;仅供学习交流，勿用于任何商业用途</div>
+  
   </body>
 </html>
