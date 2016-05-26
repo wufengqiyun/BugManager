@@ -13,6 +13,11 @@
     <servlet-name>BugInputServlet</servlet-name>
     <servlet-class>com.bm.servlet.BugInputServlet</servlet-class>
   </servlet>
+  <servlet>
+    <servlet-name>BugQueryServlet</servlet-name>
+    <servlet-class>com.bm.servlet.BugQueryServlet</servlet-class>
+  </servlet>
+
 
 
   <servlet-mapping>
@@ -22,6 +27,10 @@
   <servlet-mapping>
     <servlet-name>BugInputServlet</servlet-name>
     <url-pattern>/bug/BugInput</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BugQueryServlet</servlet-name>
+    <url-pattern>/bug/BugQueryServlet</url-pattern>
   </servlet-mapping>	
   <welcome-file-list>
     <welcome-file>Login.jsp</welcome-file>

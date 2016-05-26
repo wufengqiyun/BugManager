@@ -17,14 +17,21 @@
 <script type="text/javascript" src="js/bootstrap-datetimepicker.js"
 	charset="UTF-8"></script>
 <script src="js/bootstrap-datetimepicker.zh-CN.js"
-	type="text/javascript"></script>
+	type="text/javascript"></script> 
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 	<form class="form-horizontal" action="bug/BugInput" method="post" name="bugInput">
 		<fieldset>
-		
+			<div class="place">
+    <ul class="placeul">
+    <li>位置：</li>
+    <li><a href="#">首页</a></li>
+    <li><a href="#">提交缺陷</a></li>
+    </ul>
+    </div>
 			<div id="legend" class="">
-				<legend class="">提交缺陷</legend>
+				<legend class="">Hello~~~</legend>
 			</div>
 			
 			<div class="control-group">
@@ -39,7 +46,7 @@
 				<label class="control-label" for="input01">发现时间</label>
 				<div class="controls"> 
 					<div class="input-append date form_date" data-date=""
-						data-date-format="yyyy-MM-dd">
+						data-date-format="yyyy-mm-dd">
 					<input size="8" type="text" value="" readonly class="input-medium" id="bug_Time" name="bug_Time">
 					<span class="add-on"><i class="icon-remove"></i></span>
 					<span class="add-on"><i class="icon-th"></i></span> 
@@ -80,11 +87,11 @@
 				<label class="control-label">缺陷层级</label>
 				<div class="controls">
 					<select class="input-large" id="bug_Level" name="bug_Level">
-						<option>危急（Critical）</option>
-						<option>严重（Serious）</option>
-						<option>重要（Important）</option>
-						<option>常规（Normal）</option>
-						<option>轻微（Minor）</option>
+						<option>危急(Critical)</option>
+						<option>严重(Serious)</option>
+						<option>重要(Important)</option>
+						<option>常规(Normal)</option>
+						<option>轻微(Minor)</option>
 					</select>
 					<p class="help-block"></p>
 				</div>
@@ -95,12 +102,12 @@
 				<label class="control-label">缺陷种类</label>
 				<div class="controls">
 					<select class="input-large" id="bug_Type" name="bug_Type">
-						<option>功能问题F- Function</option>
-						<option>接口问题I-Interface</option>
-						<option>计算问题C-Computation</option>
-						<option>用户界面问题U-User Interface</option>
-						<option>文档问题D-Documentation</option>
-						<option>其他问题O-Others</option>
+						<option>功能问题(F- Function)</option>
+						<option>接口问题(I-Interface)</option>
+						<option>计算问题(C-Computation)</option>
+						<option>用户界面问题(U-User Interface)</option>
+						<option>文档问题(D-Documentation)</option>
+						<option>其他问题(O-Others)</option>
 					</select>
 					<p class="help-block"></p>
 				</div>

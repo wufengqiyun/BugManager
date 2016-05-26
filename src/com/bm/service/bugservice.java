@@ -64,14 +64,16 @@ public class bugservice {
 			ResultSet resultSet=pstmt.executeQuery();
 			while (resultSet.next()) {
 				BugInputModel bugQuery=new BugInputModel();
+				
 				bugQuery.setBug_Id(resultSet.getInt(1));
 				bugQuery.setBug_Finder(resultSet.getString(2));
-				bugQuery.setBug_Name(resultSet.getString(3));
-				bugQuery.setBug_From(resultSet.getString(4));
-				bugQuery.setBug_Fromv(resultSet.getString(5));
-				bugQuery.setBug_Level(resultSet.getString(6));
-				bugQuery.setBug_Type(resultSet.getString(7));
-				bugQuery.setBug_Desc(resultSet.getString(8));
+				bugQuery.setBug_Time(resultSet.getString(3));
+				bugQuery.setBug_Name(resultSet.getString(4));
+				bugQuery.setBug_From(resultSet.getString(5));
+				bugQuery.setBug_Fromv(resultSet.getString(6));
+				bugQuery.setBug_Level(resultSet.getString(7));
+				bugQuery.setBug_Type(resultSet.getString(8));
+				bugQuery.setBug_Desc(resultSet.getString(9));
 				queryBugs.add(bugQuery);
 			}
 			return queryBugs;

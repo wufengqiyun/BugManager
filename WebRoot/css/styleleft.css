@@ -14,7 +14,7 @@ a{ text-decoration:none}
 .leftmenu1 .menu-oc{ position:absolute; margin-left:240px; cursor:pointer}
 .leftmenu1>ul{ float:left; width:240px; height:auto;}
 .leftmenu1>ul>li{ width:240px; float:left; height:auto; position:relative}
-.leftmenu1>ul>li>a{ width:240px; height:45px; float:left; display:block; line-height:45px; color:#FFF; text-indent:2.5em; cursor:pointer; border-top:solid 1px #FFF}
+.leftmenu1>ul>li>a{ width:240px; height:40px; float:left; display:block; line-height:40px; color:#FFF; text-indent:2.5em; cursor:pointer; border-top:solid 1px #FFF}
 .leftmenu1>ul>li>a.a_list1{ background:url(../images/ic_grid.png) no-repeat 15px center}
 .leftmenu1>ul>li>a.a_list2{ background:url(../images/ic_user.png) no-repeat 15px center}
 .leftmenu1>ul>li>a.a_list3{ background:url(../images/ic_chats.png) no-repeat 15px center}
