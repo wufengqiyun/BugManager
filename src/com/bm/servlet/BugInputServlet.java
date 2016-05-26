@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.bm.model.BugInputModel;
+import com.bm.service.bugservice;
+
 
 public class BugInputServlet extends HttpServlet {
 
@@ -58,14 +60,39 @@ public class BugInputServlet extends HttpServlet {
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		response.setContentType("text/html");
-		PrintWriter out = response.getWriter();
-		out.println("123123123");
+		response.setContentType("text/html;UTF-8");
+		request.setCharacterEncoding("UTF-8");
+		
 		String bugFinder=request.getParameter("bug_Finder");
+		String bugTime=request.getParameter("bug_Time");
+		String bugName=request.getParameter("bug_Name");
+		String bugFrom=request.getParameter("bug_From");
+		String bugFromv=request.getParameter("bug_Fromv");
+		String bugLevel=request.getParameter("bug_Level");
+		String bugType=request.getParameter("bug_Type");
+		String bugDesc=request.getParameter("bug_Desc");
+		
 		BugInputModel bugInputModel =new BugInputModel();
 		bugInputModel.setBug_Finder(bugFinder);
+		bugInputModel.setBug_Time(bugTime);
+		bugInputModel.setBug_Name(bugName);
+		bugInputModel.setBug_From(bugFrom);
+		bugInputModel.setBug_Fromv(bugFromv);
+		bugInputModel.setBug_Level(bugLevel);
+		bugInputModel.setBug_Type(bugType);
+		bugInputModel.setBug_Desc(bugDesc);
 		
-		
+//		if (new problemservice().addProblem(probleminfosevlet)) {
+//			response.sendRedirect("../success.jsp?state=input");
+//		}
+//		else {
+//			response.sendRedirect("../inputinfo.jsp");
+		if (new bugservice().addBug(bugInputModel)) {
+			response.sendRedirect("../success.jsp?state=input");
+		}
+		else {
+			response.sendRedirect("../success.jsp?state=fail");
+		}
 	}
 
 	/**

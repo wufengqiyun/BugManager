@@ -1,14 +1,22 @@
 package com.bm.model;
 
 public class BugInputModel {
+	private int bug_Id;
 	private String bug_Finder;
 	private String bug_Time;
 	private String bug_Name;
 	private String bug_From;
 	private String bug_Fromv;
-	private String bug_level;
+	private String bug_Level;
 	private String bug_Type;
 	private String bug_Desc;
+	
+	public int getBug_Id() {
+		return bug_Id;
+	}
+	public void setBug_Id(int bug_Id) {
+		this.bug_Id = bug_Id;
+	}
 	
 	public String getBug_Finder() {
 		return bug_Finder;
@@ -40,11 +48,11 @@ public class BugInputModel {
 	public void setBug_Fromv(String bug_Fromv) {
 		this.bug_Fromv = bug_Fromv;
 	}
-	public String getBug_level() {
-		return bug_level;
+	public String getBug_Level() {
+		return bug_Level;
 	}
-	public void setBug_level(String bug_level) {
-		this.bug_level = bug_level;
+	public void setBug_Level(String bug_Level) {
+		this.bug_Level = bug_Level;
 	}
 	public String getBug_Type() {
 		return bug_Type;

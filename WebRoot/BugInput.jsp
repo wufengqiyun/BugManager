@@ -111,8 +111,7 @@
 				<label class="control-label">其他描述</label>
 				<div class="controls">
 					<div class="textarea">
-						<textarea type="" class="input-xlarge" rows="5" id="bug_Desc" name="bug_Desc"> 
-						</textarea>
+						<textarea class="input-xlarge" rows="5" id="bug_Desc" name="bug_Desc"></textarea>
 					</div>
 				</div>
 			</div>
