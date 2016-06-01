@@ -6,8 +6,8 @@
 	http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
   <display-name></display-name>
   <servlet>
-    <servlet-name>loginServlet</servlet-name>
-    <servlet-class>com.bm.servlet.loginServlet</servlet-class>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>com.bm.servlet.LoginServlet</servlet-class>
   </servlet>
   <servlet>
     <servlet-name>BugInputServlet</servlet-name>
@@ -17,12 +17,17 @@
     <servlet-name>BugQueryServlet</servlet-name>
     <servlet-class>com.bm.servlet.BugQueryServlet</servlet-class>
   </servlet>
+  <servlet>
+    <servlet-name>BugInputReadyServlet</servlet-name>
+    <servlet-class>com.bm.servlet.BugInputReadyServlet</servlet-class>
+  </servlet>
+
 
 
 
   <servlet-mapping>
-    <servlet-name>loginServlet</servlet-name>
-    <url-pattern>/user/loginServlet</url-pattern>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/user/LoginServlet</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
     <servlet-name>BugInputServlet</servlet-name>
@@ -31,6 +36,10 @@
   <servlet-mapping>
     <servlet-name>BugQueryServlet</servlet-name>
     <url-pattern>/bug/BugQueryServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BugInputReadyServlet</servlet-name>
+    <url-pattern>/bug/BugInputReadyServlet</url-pattern>
   </servlet-mapping>	
   <welcome-file-list>
     <welcome-file>Login.jsp</welcome-file>
