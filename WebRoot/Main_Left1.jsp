@@ -49,7 +49,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             <li>
             	<a class="a_list a_list3">配置项管理</a>
                 <div class="menu_list">
-                	<a href="#">录入</a>
+                	<a href="BugInput.jsp"  target="rightFrame">录入</a>
                     <a href="#">展示</a>
                     <a href="#">修改</a>
                     <a href="#">删除</a>

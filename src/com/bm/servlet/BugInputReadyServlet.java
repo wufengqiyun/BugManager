@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
 
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -58,13 +59,14 @@ public class BugInputReadyServlet extends HttpServlet {
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		response.setContentType("text/html");
+		
 		List<String> softwarelist=new softwareservice().softwareList();
-		request.setAttribute("softwarelist", softwarelist);
-		request.getRequestDispatcher("../BugInput.jsp").forward(request,response); 
-//		HttpSession session=request.getSession();
-//		session.setAttribute("softwarelist", softwarelist);
-//		response.sendRedirect("../BugInput.jsp");
+//		
+//		request.setAttribute("softwarelist", softwarelist);
+//		request.getRequestDispatcher("../BugInput2.jsp").forward(request,response); 
+		HttpSession session=request.getSession();
+		session.setAttribute("softwarelist", softwarelist);
+		response.sendRedirect(request.getContextPath() + "/BugInput2.jsp");
 	}
 
 	/**

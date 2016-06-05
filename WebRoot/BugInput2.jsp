@@ -5,33 +5,26 @@
 			+ request.getServerName() + ":" + request.getServerPort()
 			+ path + "/";
 %>
- <base href="<%=basePath%>">
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>  
 <!DOCTYPE html>
 <html>
 <head>
- <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script> 
+<script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
 <script src="http://libs.baidu.com/bootstrap/2.0.4/js/bootstrap.min.js"></script>
 <link href="http://libs.baidu.com/bootstrap/2.0.4/css/bootstrap.min.css"
 	rel="stylesheet">
 	
-<!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
- -->
 <link rel="stylesheet" type="text/css"
 	href="css/bootstrap-datetimepicker.min.css" />
 <script type="text/javascript" src="js/bootstrap-datetimepicker.js"
 	></script>
-	<!-- <script type="text/javascript" src="js/bootstrap.min.js"
-	></script>
-	<script type="text/javascript" src="js/jquery.js"
-	></script> -->
 <script src="js/bootstrap-datetimepicker.zh-CN.js"
 	type="text/javascript"></script> 
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 	<%
-		List<String> softwareList=(List<String>)session.getAttribute("softwarelist");
+		List<String> softwareList=(List<String>)request.getAttribute("softwarelist");
 		/* out.println(softwareList); */
 	 %>
 	<form class="form-horizontal" action="bug/BugInput" method="post" name="bugInput">
