@@ -160,7 +160,7 @@
             <h2>
 				<span class="fa fa-quote-left "></span> 缺陷管理系统 <span class="fa fa-quote-right "></span>
 			</h2>
-			<form id="loginform"  action="user/loginServlet"  name="login"  method="post">
+			<form id="loginform"  action="user/LoginServlet"  name="login"  method="post">
             <div>
                 <input id="username" name="username" type="text" placeholder="登录账号" onblur="GetPwdAndChk()" onkeydown="check_values();">
                 <input id="password" class="input2" name="password" type="password" placeholder="输入密码" onkeydown="check_values();">

@@ -2,6 +2,7 @@ package com.bm.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -9,15 +10,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.bm.model.userModel;
-import com.bm.service.userservice;
+import com.bm.service.softwareservice;
 
-public class LoginServlet extends HttpServlet {
+public class BugInputReadyServlet extends HttpServlet {
 
 	/**
 	 * Constructor of the object.
 	 */
-	public LoginServlet() {
+	public BugInputReadyServlet() {
 		super();
 	}
 
@@ -41,6 +41,7 @@ public class LoginServlet extends HttpServlet {
 	 */
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+
 		doPost(request, response);
 	}
 
@@ -56,26 +57,15 @@ public class LoginServlet extends HttpServlet {
 	 */
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		PrintWriter out = response.getWriter();
-		String userName=request.getParameter("username");
-		String passWord=request.getParameter("password");
-		out.println(userName);
-		
-		userModel user=new userModel();
-		user.setUserID(userName);
-		user.setUserPassword(passWord);
-		
-		    if (new userservice().validate(user)) {
-				
-				HttpSession session=request.getSession();
-				session.setAttribute("user", user);
-				response.sendRedirect("../Main.jsp");
-			}
-			else {
-				response.sendRedirect("../Login.jsp");
-			}		
-		} 
-	
+
+		response.setContentType("text/html");
+		List<String> softwarelist=new softwareservice().softwareList();
+		request.setAttribute("softwarelist", softwarelist);
+		request.getRequestDispatcher("../BugInput.jsp").forward(request,response); 
+//		HttpSession session=request.getSession();
+//		session.setAttribute("softwarelist", softwarelist);
+//		response.sendRedirect("../BugInput.jsp");
+	}
 
 	/**
 	 * Initialization of the servlet. <br>

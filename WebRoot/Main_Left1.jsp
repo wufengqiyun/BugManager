@@ -40,7 +40,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             <li>
             	<a class="a_list a_list2">缺陷管理</a>
                 <div class="menu_list">
-                	<a href="BugInput.jsp" target="rightFrame">录入</a>
+                	<a href="bug/BugInputReadyServlet" target="rightFrame">录入</a>
                     <a href="bug/BugQueryServlet?bugDo=query" target="rightFrame">展示</a>
                     <a href="bug/BugQueryServlet?bugDo=modify" target="rightFrame">修改</a>
                     <a href="bug/BugQueryServlet?bugDo=delete" target="rightFrame">删除</a>
@@ -49,8 +49,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             <li>
             	<a class="a_list a_list3">配置项管理</a>
                 <div class="menu_list">
-                	<a href="#">录入</a>
-                    <a href="#">展示</a>
+                	<a href="browseSoftware.action" target="rightFrame">显示软件名</a>
+                    <a href="browseBug.action" target="rightFrame">展示</a>
                     <a href="#">修改</a>
                     <a href="#">删除</a>
                 </div>

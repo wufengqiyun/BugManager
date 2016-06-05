@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+
+<package name="default" extends="struts-default">
+
+<action name="browseSoftware" class="softwareAction" method="browseSoftware">
+<result name="success">/jkxy.jsp</result>
+</action>
+
+<action name="first">
+<result>/Login.jsp</result>
+</action>
+
+<action name="browseBug" class="bugAction" method="browseBug">
+<result name="success">/jkxy.jsp</result>
+</action>
+
+<action name="browseBugPaging" class="bugAction" method="browseBugPaging">
+<result name="success">/browseBugPaging.jsp</result>
+</action>
+</package>
+</struts>    

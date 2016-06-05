@@ -178,8 +178,8 @@ h2{font-weight:normal;}
 .iconlist li{text-align:center; float:left; margin-right:25px; margin-top:25px;}
 .iconlist li p{line-height:25px;}
 .ibox{clear:both; padding-left:40px; padding-top:18px; overflow:hidden; padding-bottom:18px;}
-.ibtn{background:url(../images/ibtnbg.png) repeat-x;border:solid 1px #bfcfe1; height:23px; line-height:23px; display:block; float:left; padding:0 15px; cursor:pointer;}
-.ibtn img{margin-top:5px; float:left; padding-right:7px;}
+/* .ibtn{background:url(../images/ibtnbg.png) repeat-x;border:solid 1px #bfcfe1; height:23px; line-height:23px; display:block; float:left; padding:0 15px; cursor:pointer;}
+.ibtn img{margin-top:5px; float:left; padding-right:7px;} */
 .box{height:15px;}
 .infolist{padding-left:40px; padding-bottom:15px;}
 .infolist li{ line-height:23px; height:23px; margin-bottom:8px;}
@@ -224,8 +224,8 @@ h2{font-weight:normal;}
 .forminfo li cite{display:block; padding-top:10px;}
 .dfinput{width:345px; height:32px; line-height:32px; border-top:solid 1px #c3ab7d; border-left:solid 1px #c3ab7d; border-right:solid 1px #e7d5ba; border-bottom:solid 1px #e7d5ba; background:url(../images/inputbg.gif) repeat-x; text-indent:10px;}
 .textinput{border-top:solid 1px #c3ab7d; border-left:solid 1px #c3ab7d; border-right:solid 1px #e7d5ba; border-bottom:solid 1px #e7d5ba; background:url(../images/inputbg.gif) repeat-x; padding:10px; width:504px; height:135px; line-height:20px; overflow:hidden;}
-.btn{width:137px;height:35px; background:url(../images/btnbg.png) no-repeat; font-size:14px;font-weight:bold;color:#fff; cursor:pointer;}
-
+/* .btn{width:137px;height:35px; background:url(../images/btnbg.png) no-repeat; font-size:14px;font-weight:bold;color:#fff; cursor:pointer;}
+ */
 
 /*tip*/
 .tip{width:485px; height:260px; position:absolute;top:10%; left:30%;background:#fcfdfd;box-shadow:1px 8px 10px 1px #9b9b9b;border-radius:1px;behavior:url(js/pie.htc); display:none; z-index:111111;}

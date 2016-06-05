@@ -5,6 +5,7 @@
 			+ request.getServerName() + ":" + request.getServerPort()
 			+ path + "/";
 %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>  
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,6 +22,10 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
+	<%
+		List<String> softwareList=(List<String>)request.getAttribute("softwarelist");
+		/* out.println(softwareList); */
+	 %>
 	<form class="form-horizontal" action="bug/BugInput" method="post" name="bugInput">
 		<fieldset>
 			<div class="place">
@@ -68,7 +73,15 @@
 				<!-- Text input-->
 				<label class="control-label" for="input01">来源软件</label>
 				<div class="controls">
-					<input type="text" placeholder="请输入缺陷所在的软件" class="input-large" id="bug_From" name="bug_From">
+					<!-- <input type="text" placeholder="请输入缺陷所在的软件" class="input-large" id="bug_From" name="bug_From"> -->
+					<select class="input-large" id="bug_From" name="bug_From" >
+						<%-- <%for(int i=1;i<softwareList.size();i++){%>
+							<option><%=softwareList.get(i)%> </option>>
+						<%}%> --%>
+						<c:forEach items="${softwarelist}" var="item">
+							<option>${item} </option>
+						</c:forEach>
+					</select>
 					<p class="help-block"></p>
 				</div>
 			</div>
@@ -127,7 +140,7 @@
 				<label class="control-label"></label>
 				<!-- Button -->
 				<div class="controls">
-					<button class="btn btn-default">提交缺陷</button>
+					<button class="scbtn">提交缺陷</button>
 				</div>
 			</div>
 		</fieldset>
