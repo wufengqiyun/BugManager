@@ -63,6 +63,7 @@ public class BugInputServlet extends HttpServlet {
 		response.setContentType("text/html;UTF-8");
 		request.setCharacterEncoding("UTF-8");
 		
+		System.out.println("你好");
 		String bugFinder=request.getParameter("bug_Finder");
 		String bugTime=request.getParameter("bug_Time");
 		String bugName=request.getParameter("bug_Name");
